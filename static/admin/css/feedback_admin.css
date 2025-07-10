@@ -1,0 +1,45 @@
+/* Стили для админки обратной связи */
+
+/* Подсветка непрочитанных записей */
+.field-get_status_display .field-get_status_display {
+    font-weight: bold;
+}
+
+/* Стили для строк с непрочитанными сообщениями */
+.row1:has(.field-get_status_display span[style*="background-color: #f8d7da"]) {
+    background-color: #fff3cd !important;
+    border-left: 4px solid #ffc107;
+}
+
+.row2:has(.field-get_status_display span[style*="background-color: #f8d7da"]) {
+    background-color: #fff3cd !important;
+    border-left: 4px solid #ffc107;
+}
+
+/* Анимация для новых сообщений */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.row1:has(.field-get_status_display span[style*="background-color: #f8d7da"]),
+.row2:has(.field-get_status_display span[style*="background-color: #f8d7da"]) {
+    animation: pulse 2s infinite;
+}
+
+/* Стили для фильтров */
+.field-is_read .field-is_read {
+    font-weight: bold;
+}
+
+/* Улучшенные стили для статуса */
+.field-get_status_display span {
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+} 
